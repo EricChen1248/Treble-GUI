@@ -11,15 +11,17 @@ namespace Treble_GUI
     /// </summary>
     public partial class Login
     {
-        public Login()
+        private readonly Action<string> loginSuccessful;
+        public Login(Action<string> login)
         {
             InitializeComponent();
+            loginSuccessful = login;
         }
 
         private void LoginBtn_OnClick(object sender, RoutedEventArgs e)
         {
             // Check DataBase
-            MainWindow.Account = UserBox.Text;
+            loginSuccessful(UserBox.Text);
         }
 
         private void PasswordBox_OnKeyDown(object sender, KeyEventArgs e)

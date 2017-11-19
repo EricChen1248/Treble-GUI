@@ -99,6 +99,6 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Frame x:Name="Frame"  Content="Frame" HorizontalAlignment="Stretch" Margin="0,0,0,0" Grid.Row="1" VerticalAlignment="Stretch" />
+        <Frame x:Name="Frame"  Content="Frame" HorizontalAlignment="Stretch" Margin="0,0,0,0" Grid.Row="1" VerticalAlignment="Stretch" NavigationUIVisibility="Hidden" />
     </Grid>
 </Window>

@@ -10,11 +10,17 @@ namespace Treble_GUI
     /// </summary>
     public partial class MainWindow
     {
-        public static string Account;
+        private static string Account;
         public MainWindow()
         {
             InitializeComponent();
-            Frame.Content = new Login();
+            Frame.Content = new Login(LoginSuccessful);
+            Frame.Navigated += Frame_Navigated;
+        }
+
+        private void Frame_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)
+        {
+            Frame.NavigationService.RemoveBackEntry();
         }
 
         private void CloseBtn_OnClick(object sender, RoutedEventArgs e)
@@ -35,6 +41,13 @@ namespace Treble_GUI
         private void TitleBar_OnMouseDown(object sender, MouseButtonEventArgs e)
         {
             DragMove();
+        }
+
+        private void LoginSuccessful(string account)
+        {
+            Frame.Content = null;
+            Account = account;
+            MessageBox.Show(Account);
         }
 
         
