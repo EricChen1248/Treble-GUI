@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Input;
 
-namespace Treble_GUI
+namespace Treble_GUI.Pages
 {
     /// <summary>
     /// Interaction logic for Login.xaml
@@ -21,7 +20,7 @@ namespace Treble_GUI
         private void LoginBtn_OnClick(object sender, RoutedEventArgs e)
         {
             // Check DataBase
-            loginSuccessful(UserBox.Text);
+            loginSuccessful(UserBox.Text.ToLower());
         }
 
         private void PasswordBox_OnKeyDown(object sender, KeyEventArgs e)
