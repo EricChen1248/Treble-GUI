@@ -1,6 +1,5 @@
 ﻿using System.Windows;
 using System.Windows.Controls.Primitives;
-using System.Windows.Input;
 using Treble_GUI.Pages;
 
 namespace Treble_GUI
@@ -13,9 +12,10 @@ namespace Treble_GUI
         public MainWindow()
         {
             InitializeComponent();
-            Frame.Content = new Pages.Login(LoginSuccessful);
+            Frame.Content = new Login(LoginSuccessful);
+
             Frame.Navigated += Frame_Navigated;
-            initTitleBar();
+            InitTitleBar();
 
         }
 
@@ -44,7 +44,7 @@ namespace Treble_GUI
             Frame.Content = new Userpage(account);
         }
 
-        private void initTitleBar()
+        private void InitTitleBar()
         {
             var restoreIfMove = false;
 
