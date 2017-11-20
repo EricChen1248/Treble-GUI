@@ -1,8 +1,5 @@
-﻿using System;
-using System.ComponentModel;
-using System.IO;
-using System.Windows;
-using System.Windows.Controls;
+﻿using System.Windows;
+using System.Windows.Controls.Primitives;
 using System.Windows.Input;
 using Treble_GUI.Pages;
 
@@ -18,6 +15,8 @@ namespace Treble_GUI
             InitializeComponent();
             Frame.Content = new Pages.Login(LoginSuccessful);
             Frame.Navigated += Frame_Navigated;
+            initTitleBar();
+
         }
 
         private void Frame_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)
@@ -40,15 +39,54 @@ namespace Treble_GUI
             WindowState = WindowState.Minimized;
         }
 
-        private void TitleBar_OnMouseDown(object sender, MouseButtonEventArgs e)
-        {
-            DragMove();
-        }
-
         private void LoginSuccessful(string account)
         {
             Frame.Content = new Userpage(account);
         }
 
+        private void initTitleBar()
+        {
+            var restoreIfMove = false;
+
+            TitleBar.MouseDown += (s, e) =>
+            {
+                if (e.ClickCount == 2)
+                {
+                    MaximizeBtn.RaiseEvent(new RoutedEventArgs(ButtonBase.ClickEvent));
+                    return;
+                }
+                if (WindowState == WindowState.Maximized)
+                {
+                    restoreIfMove = true;
+                }
+                DragMove();
+            };
+
+            TitleBar.MouseUp += (s, e) => restoreIfMove = false;
+
+            TitleBar.MouseMove += (s, e) =>
+            {
+                if (!restoreIfMove) return;
+
+                restoreIfMove = false;
+                var mouseX = e.GetPosition(this).X;
+                var width = RestoreBounds.Width;
+                var x = mouseX - width / 2;
+
+                if (x < 0)
+                {
+                    x = 0;
+                }
+                else if (x + width > Width)
+                {
+                    x = Width - width;
+                }
+
+                WindowState = WindowState.Normal;
+                Left = x;
+                Top = 0;
+                DragMove();
+            };
+        }
     }
 }

@@ -4,14 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="800" WindowStyle="None" ResizeMode="NoResize">
+        Title="MainWindow" Height="600" Width="800" WindowStyle="None" ResizeMode="NoResize" BorderBrush="#FF686868" BorderThickness="1">
 
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Rectangle x:Name="TitleBar" Fill="#FF686868" Margin="0,0,0,0 " MouseDown="TitleBar_OnMouseDown" />
+        <Rectangle x:Name="TitleBar" Fill="#FF686868" Margin="0,0,0,0 " />
         <Button Grid.Row="0" x:Name="CloseBtn" HorizontalAlignment="Right" Height="30" Margin="0,0,0,0" Width="40" BorderBrush="{x:Null}" Foreground="{x:Null}" Click ="CloseBtn_OnClick" >
             <Button.Style>
                 <Style TargetType="{x:Type Button}">
@@ -99,6 +99,6 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Frame x:Name="Frame"  Content="Frame" HorizontalAlignment="Stretch" Margin="0,0,0,0" Grid.Row="1" VerticalAlignment="Stretch" NavigationUIVisibility="Hidden" />
+        <Frame x:Name="Frame"  Content="Frame" HorizontalAlignment="Stretch" Margin="0,0,0,0" Grid.Row="1" VerticalAlignment="Stretch" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>
