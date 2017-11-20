@@ -1,7 +1,10 @@
 ﻿using System;
+using System.ComponentModel;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using Treble_GUI.Pages;
 
 namespace Treble_GUI
 {
@@ -10,11 +13,10 @@ namespace Treble_GUI
     /// </summary>
     public partial class MainWindow
     {
-        private static string Account;
         public MainWindow()
         {
             InitializeComponent();
-            Frame.Content = new Login(LoginSuccessful);
+            Frame.Content = new Pages.Login(LoginSuccessful);
             Frame.Navigated += Frame_Navigated;
         }
 
@@ -37,7 +39,7 @@ namespace Treble_GUI
         {
             WindowState = WindowState.Minimized;
         }
-        
+
         private void TitleBar_OnMouseDown(object sender, MouseButtonEventArgs e)
         {
             DragMove();
@@ -45,11 +47,8 @@ namespace Treble_GUI
 
         private void LoginSuccessful(string account)
         {
-            Frame.Content = null;
-            Account = account;
-            MessageBox.Show(Account);
+            Frame.Content = new Userpage(account);
         }
 
-        
     }
 }
