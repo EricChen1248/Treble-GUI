@@ -1,0 +1,30 @@
+﻿<Page x:Class="Treble_GUI.Pages.Userpage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:pages="clr-namespace:Treble_GUI.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="800"
+      Title="Userpage"
+      Background="White">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+        <WrapPanel Grid.Column="1" Background="#FFE2E2E2">
+
+            <Label x:Name="UserLabel"  FontFamily="Agency FB" FontSize="24" FontWeight="Bold"  Margin="15,20,0,0" Foreground="Gray">username</Label>
+        </WrapPanel>
+        <WrapPanel x:Name="TokenPanel" HorizontalAlignment="Stretch" Height="340" Margin="50,58,50,0" VerticalAlignment="Top" >
+            <WrapPanel.Resources>
+              <Style TargetType="{x:Type pages:TokenControl}">
+                <Setter Property="Margin" Value="10,0" />
+                <Setter Property="Padding" Value="10,10" />
+              </Style>
+            </WrapPanel.Resources>  
+        </WrapPanel>
+    </Grid>
+</Page>
