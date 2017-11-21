@@ -73,7 +73,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Helper.cs" />
+    <Compile Include="Classes\Helper.cs" />
+    <Compile Include="Classes\Server.cs" />
+    <Compile Include="Classes\Exceptions\DuplicatePageException.cs" />
+    <Compile Include="Classes\Exceptions\NoPageException.cs" />
     <Compile Include="Pages\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
@@ -81,7 +84,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Pages\TokenControl.xaml">
+    <Page Include="Classes\TokenControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -91,7 +94,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pages\TokenControl.xaml.cs">
+    <Compile Include="Classes\TokenControl.xaml.cs">
       <DependentUpon>TokenControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Userpage.xaml.cs">

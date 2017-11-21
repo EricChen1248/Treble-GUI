@@ -1,4 +1,5 @@
-﻿using System.Windows.Controls;
+﻿
+using Treble_GUI.Classes;
 
 namespace Treble_GUI.Pages
 {

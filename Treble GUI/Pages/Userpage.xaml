@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:pages="clr-namespace:Treble_GUI.Pages"
+      xmlns:classes="clr-namespace:Treble_GUI.Classes"
       mc:Ignorable="d" 
       d:DesignHeight="600" d:DesignWidth="800"
       Title="Userpage"
@@ -20,7 +21,7 @@
         </WrapPanel>
         <WrapPanel x:Name="TokenPanel" HorizontalAlignment="Stretch" Height="340" Margin="50,58,50,0" VerticalAlignment="Top" >
             <WrapPanel.Resources>
-              <Style TargetType="{x:Type pages:TokenControl}">
+              <Style TargetType="{x:Type classes:TokenControl}">
                 <Setter Property="Margin" Value="10,0" />
                 <Setter Property="Padding" Value="10,10" />
               </Style>

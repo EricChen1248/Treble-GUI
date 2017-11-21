@@ -4,7 +4,7 @@ using System.Windows;
 using System.Windows.Media;
 using Jdenticon;
 
-namespace Treble_GUI.Pages
+namespace Treble_GUI.Classes
 {
     /// <summary>
     /// Interaction logic for TokenControl.xaml

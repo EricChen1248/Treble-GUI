@@ -19,7 +19,7 @@ namespace Treble_GUI.Pages
 
         private void LoginBtn_OnClick(object sender, RoutedEventArgs e)
         {
-            // Check DataBase
+            // TODO: Check DataBase
             loginSuccessful(UserBox.Text.ToLower());
         }
 

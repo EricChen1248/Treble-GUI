@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using Treble_GUI.Pages;
 
@@ -41,6 +42,7 @@ namespace Treble_GUI
 
         private void LoginSuccessful(string account)
         {
+            App.DespawnPage("loginPage", (Page) Frame.Content);
             Frame.Content = new Userpage(account);
         }
 
