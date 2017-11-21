@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
-using System.Windows;
 using System.Windows.Controls;
+using Treble_GUI.Classes.Exceptions;
 
 namespace Treble_GUI
 {
@@ -9,17 +9,28 @@ namespace Treble_GUI
     /// </summary>
     public partial class App
     {
-        private Dictionary<string, Page> pagePool = new Dictionary<string, Page>();
+        private static readonly Dictionary<string, Page> pagePool = new Dictionary<string, Page>();
 
-        public Page GetNewPage(string pageName)
+        public static Page GetNewPage(string pageName)
         {
-            // TODO: Implement Page Spawning
-            return null;
+            if (!pagePool.ContainsKey(pageName))
+            {
+                throw new NoPageException();
+            }
+
+            var page = pagePool[pageName];
+            pagePool.Remove(pageName);
+            return page;
         }
 
-        public void DespawnPage(string pageName, Page page)
+        public static void DespawnPage(string pageName, Page page)
         {
-            // TODO: Implement Page Despawning
+            if (pagePool.ContainsKey(pageName))
+            {
+                throw new DuplicatePageException();;
+            }
+
+            pagePool[pageName] = page;
         }
 
 
