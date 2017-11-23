@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Collections.Generic;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using Treble_GUI.Pages;
@@ -13,11 +14,10 @@ namespace Treble_GUI
         public MainWindow()
         {
             InitializeComponent();
-            Frame.Content = new Login(LoginSuccessful);
-
             Frame.Navigated += Frame_Navigated;
             InitTitleBar();
 
+            Frame.Content = new Login(LoginSuccessful);
         }
 
         private void Frame_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)
@@ -40,10 +40,10 @@ namespace Treble_GUI
             WindowState = WindowState.Minimized;
         }
 
-        private void LoginSuccessful(string account)
+        private void LoginSuccessful(Dictionary<string,string> userData)
         {
             App.DespawnPage("loginPage", (Page) Frame.Content);
-            Frame.Content = new Userpage(account);
+            Frame.Content = new Userpage(userData);
         }
 
         private void InitTitleBar()
