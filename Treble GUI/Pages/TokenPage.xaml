@@ -1,0 +1,16 @@
+﻿<Page x:Class="Treble_GUI.Pages.TokenPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Treble_GUI.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="800"
+      Title="TokenPage"
+      Background ="White">
+
+    <Grid>
+        <Label Content="Token Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="42,34,478,470" FontFamily="Agency FB" HorizontalContentAlignment="Center" FontSize="72"/>
+
+    </Grid>
+</Page>

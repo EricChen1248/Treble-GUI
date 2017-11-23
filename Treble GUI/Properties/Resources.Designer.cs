@@ -59,5 +59,14 @@ namespace Treble_GUI.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to IOException Error. File: {0} is currently unwritable, attempt #{1}.
+        /// </summary>
+        internal static string Database_IOError_with_Attempt_Count {
+            get {
+                return ResourceManager.GetString("Database IOError with Attempt Count", resourceCulture);
+            }
+        }
     }
 }
