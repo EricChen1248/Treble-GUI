@@ -6,12 +6,13 @@
              mc:Ignorable="d" 
              d:DesignHeight="75" d:DesignWidth="400"
              Background="White">
-    <Grid Background="#FFF0F0F0">
+    <Grid Background="#FFF0F0F0" Margin="0,0,-80,0">
+        <Rectangle Height ="75" Width="480"/>
+
         <Ellipse x:Name="TokenIcon" Stroke="Black" HorizontalAlignment="Left" Height="56" Width="56" Margin="16,8,0,0" VerticalAlignment="Top" />
         <Label x:Name="TokenName" Content="Label" HorizontalAlignment="Left" Margin="92,5,0,0" VerticalAlignment="Top" FontFamily="Berlin Sans FB" FontSize="16" FontWeight="Bold" Background="{x:Null}" Foreground="#FF646464"  />
-        <Label x:Name="TokenPercentLbl" Content="100%" HorizontalAlignment="left" Margin="336,37,0,0" VerticalAlignment="Top" FontFamily="Berlin Sans FB" FontSize="16" FontWeight="Bold" Background="{x:Null}" Foreground="#FF646464"  />
-        <Label x:Name="TokenCountLbl" Content="Label" HorizontalAlignment="Left" Margin="93,37,0,0" VerticalAlignment="Top" FontFamily="Berlin Sans FB" FontSize="16" FontWeight="Bold" Background="{x:Null}" Foreground="#FF646464"  />
-        <Rectangle Height ="75" Width="400"  />
+        <Label x:Name="TokenPercentLbl" Content="100%" HorizontalAlignment="left" Margin="419,36,0,0" VerticalAlignment="Top" FontFamily="Berlin Sans FB" FontSize="16" FontWeight="Bold" Background="{x:Null}" Foreground="#FF646464"  />
+        <Label x:Name="TokenAddressLabel" Content="Label" HorizontalAlignment="Left" Margin="93,37,0,0" VerticalAlignment="Top" FontFamily="Berlin Sans FB" FontSize="16" FontWeight="Bold" Background="{x:Null}" Foreground="#FF646464"  />
 
     </Grid>
 </UserControl>

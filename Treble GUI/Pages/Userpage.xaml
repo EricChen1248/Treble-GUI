@@ -17,8 +17,8 @@
         </Grid.ColumnDefinitions>
         <Grid Grid.Column="1" Background="#FFE2E2E2">
             <Label x:Name="UserLabel"  FontFamily="Agency FB" FontSize="24" FontWeight="Bold" VerticalAlignment="Top" HorizontalAlignment="Left"  Margin="15,20,0,0" Foreground="Gray">username</Label>
-            <Label x:Name="MoneyLabel"  FontFamily="Agency FB" HorizontalContentAlignment="Left" VerticalAlignment="Bottom" HorizontalAlignment="Right" FontSize="24" FontWeight="Bold"  Margin="0,0,10,499" Foreground="Gray" Content="$100" Width="175"/>
-            <Button Content="Purchase New Tokens" FontFamily="Agency FB" FontSize="23" FontWeight="Bold" Foreground="Gray" HorizontalAlignment="Stretch" Margin="10,0,10,10" VerticalAlignment="Bottom" Height="33">
+            <Label x:Name="MoneyLabel"  FontFamily="Agency FB" HorizontalContentAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="24" FontWeight="Bold"  Margin="0,63,10,0" Foreground="Gray" Content="$100" Width="175"/>
+            <Button Content="Purchase New Tokens" FontFamily="Agency FB" FontSize="23" FontWeight="Bold" Foreground="Gray" HorizontalAlignment="Stretch" Margin="10,0,10,124" VerticalAlignment="Bottom" Height="33">
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
                         <Setter Property="Background">
@@ -47,7 +47,94 @@
                     </Style>
                 </Button.Style>
             </Button>
-            <Button Content="Transactions               " FontFamily="Agency FB" FontSize="23"  Foreground="Gray" HorizontalAlignment="Stretch" Margin="10,0,10,48" VerticalAlignment="Bottom" Height="33" FontWeight="Bold">
+            <Button Content="Transactions               " FontFamily="Agency FB" FontSize="23"  Foreground="Gray" HorizontalAlignment="Stretch" Margin="10,0,10,86" VerticalAlignment="Bottom" Height="33" FontWeight="Bold">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background">
+                            <Setter.Value>
+                                <Brush>#FFE2E2E2</Brush>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background">
+                                    <Setter.Value>
+                                        <Brush>#FFD2D2D2</Brush>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+            <Button Content="Account Settings        " FontFamily="Agency FB" FontSize="23" FontWeight="Bold" Foreground="Gray" HorizontalAlignment="Stretch" Margin="10,0,10,10" VerticalAlignment="Bottom" Height="33">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background">
+                            <Setter.Value>
+                                <Brush>#FFE2E2E2</Brush>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background">
+                                    <Setter.Value>
+                                        <Brush>#FFD2D2D2</Brush>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+            <Button Content="Exchange Money         " FontFamily="Agency FB" FontSize="23" FontWeight="Bold" Foreground="Gray" HorizontalAlignment="Stretch" Margin="10,0,10,48" VerticalAlignment="Bottom" Height="33">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background">
+                            <Setter.Value>
+                                <Brush>#FFE2E2E2</Brush>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background">
+                                    <Setter.Value>
+                                        <Brush>#FFD2D2D2</Brush>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+            <Button Content="Rental System             " FontFamily="Agency FB" FontSize="23" FontWeight="Bold" Foreground="Gray" HorizontalAlignment="Stretch" Margin="10,0,10,162" VerticalAlignment="Bottom" Height="33">
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
                         <Setter Property="Background">

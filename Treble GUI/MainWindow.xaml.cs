@@ -2,6 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
+using Treble_GUI.Classes.Exceptions;
 using Treble_GUI.Pages;
 
 namespace Treble_GUI
@@ -11,6 +12,8 @@ namespace Treble_GUI
     /// </summary>
     public partial class MainWindow
     {
+
+        public static MainWindow Instance;
         public MainWindow()
         {
             InitializeComponent();
@@ -18,6 +21,7 @@ namespace Treble_GUI
             InitTitleBar();
 
             Frame.Content = new Login(LoginSuccessful);
+            Instance = this;
         }
 
         private void Frame_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)
@@ -89,6 +93,13 @@ namespace Treble_GUI
                 Top = 0;
                 DragMove();
             };
+        }
+
+        public void ChangeToToken(Page tokenPage)
+        {
+            App.DespawnPage("userPage", (Page) Frame.Content);
+            
+            Frame.Content = tokenPage;
         }
     }
 }

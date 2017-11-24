@@ -18,11 +18,12 @@ namespace Treble_GUI.Pages
     /// <summary>
     /// Interaction logic for TokenPage.xaml
     /// </summary>
-    public partial class TokenPage : Page
+    public partial class TokenPage 
     {
         public TokenPage()
         {
             InitializeComponent();
         }
+        
     }
 }

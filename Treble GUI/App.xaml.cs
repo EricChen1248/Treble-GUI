@@ -27,12 +27,11 @@ namespace Treble_GUI
         {
             if (pagePool.ContainsKey(pageName))
             {
-                throw new DuplicatePageException();;
+                throw new DuplicatePageException(); ;
             }
 
             pagePool[pageName] = page;
         }
-
 
     }
 }

@@ -2,15 +2,127 @@
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Treble_GUI.Pages"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       mc:Ignorable="d" 
       d:DesignHeight="600" d:DesignWidth="800"
       Title="TokenPage"
       Background ="White">
 
     <Grid>
-        <Label Content="Token Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="42,34,478,470" FontFamily="Agency FB" HorizontalContentAlignment="Center" FontSize="72"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="125*"/>
+            <RowDefinition Height="96*"/>
+            <RowDefinition Height="325*"/>
+            <RowDefinition Height="54*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="TokenLabel" Content="京華大樓 11F" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="42,34,0,0" FontFamily="Agency FB" HorizontalContentAlignment="Left" FontSize="72" Height="95" Width="580" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <Label x:Name="AddressLabel" Content="台北市大安區建國南路一段 291 巷 25 號" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="42,4,0,0" FontFamily="Agency FB" HorizontalContentAlignment="Left" FontSize="28" Width="718" Grid.ColumnSpan="2"
+               Grid.Column="0" Height="43" Grid.Row="1"/>
+        <Label x:Name="TokenCount" Content="10/500" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,72,10,0" FontFamily="Agency FB" HorizontalContentAlignment="Right" FontSize="28"
+               Grid.Row="0" Grid.Column="1" Height="43" Width="134"/>
+        <Label x:Name="RentalLabel" Content="$40,000 / 月" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="42,52,0,0" FontFamily="Agency FB" HorizontalContentAlignment="Left" FontSize="28" Width="718" Grid.ColumnSpan="2"
+               Grid.Column="0" Height="43" Grid.Row="1"/>
+        <Button Content="購買代幣" FontFamily="Agency FB" FontSize="23" HorizontalContentAlignment="Left" FontWeight="Bold" Foreground="Gray" Margin="10,0,153,10" VerticalAlignment="Bottom" Height="33" Grid.Row="3"
+                Grid.Column="0">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <Brush>#FFE2E2E2</Brush>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background">
+                                <Setter.Value>
+                                    <Brush>#FFD2D2D2</Brush>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="租賃系統" FontFamily="Agency FB" FontSize="23" FontWeight="Bold" Foreground="Gray" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Height="33" Width="224" Grid.Column="1" Grid.Row="3">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <Brush>#FFE2E2E2</Brush>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background">
+                                <Setter.Value>
+                                    <Brush>#FFD2D2D2</Brush>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="售出代幣" FontFamily="Agency FB" FontSize="23" FontWeight="Bold" Foreground="Gray" HorizontalAlignment="Center" Margin="288,0,288,11" VerticalAlignment="Bottom" Height="33" Width="224" Grid.ColumnSpan="2"
+                Grid.Column="0" Grid.Row="3">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <Brush>#FFE2E2E2</Brush>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background">
+                                <Setter.Value>
+                                    <Brush>#FFD2D2D2</Brush>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Label x:Name="AreaLabel" Content="30 坪" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="305,47,0,0" FontFamily="Agency FB" HorizontalContentAlignment="Right" FontSize="28" Width="85" Height="43" Grid.Column="1" Grid.Row="1"/>
+        <Label x:Name="RoomLabel" Content="三房二廳二衛一陽台" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="27,72,0,0" FontFamily="Agency FB" HorizontalContentAlignment="Left" FontSize="28" Width="363" Height="43" Grid.Column="1" Grid.Row="2"/>
+        <Label x:Name="PublicAreaLabel" Content="公設比: 30%" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,120,10,0" FontFamily="Agency FB" HorizontalContentAlignment="Left" FontSize="28" Width="353" Height="43" Grid.Column="1" Grid.Row="2"/>
+        <Image HorizontalAlignment="Left" Height="310" Margin="42,11,0,0" VerticalAlignment="Top" Width="310" Grid.Row="2"
+               Grid.Column="0" />
+        <Label x:Name="AreaLabel_Copy" Content="11F / 14F" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,24,10,0" FontFamily="Agency FB" HorizontalContentAlignment="Left" FontSize="28" Width="353" Height="43" Grid.Column="1" Grid.Row="2"/>
+        <TextBlock x:Name="PublicAreaLabel_Copy" Text=" 電梯大樓、含管理費、附家具" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,182,10,0" FontFamily="Agency FB" FontSize="28" Width="353" Height="133" Grid.Column="1" Grid.Row="2" TextWrapping="Wrap"/>
+        <Label x:Name="PublicAreaLabel_Copy1" Content="屋齡 15 年" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="256,10,0,0" FontFamily="Agency FB" HorizontalContentAlignment="Right" FontSize="28" Width="134" Height="43" Grid.Column="1" Grid.Row="1"/>
 
     </Grid>
 </Page>
