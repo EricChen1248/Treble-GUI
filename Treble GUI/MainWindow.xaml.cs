@@ -26,7 +26,7 @@ namespace Treble_GUI
 
         private void Frame_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)
         {
-            Frame.NavigationService.RemoveBackEntry();
+            ((Frame)sender).NavigationService.RemoveBackEntry();
         }
 
         private void CloseBtn_OnClick(object sender, RoutedEventArgs e)
@@ -68,7 +68,10 @@ namespace Treble_GUI
                 DragMove();
             };
 
-            TitleBar.MouseUp += (s, e) => restoreIfMove = false;
+            TitleBar.MouseUp += (s, e) =>
+            {
+                restoreIfMove = false;
+            };
 
             TitleBar.MouseMove += (s, e) =>
             {
@@ -98,8 +101,24 @@ namespace Treble_GUI
         public void ChangeToToken(Page tokenPage)
         {
             App.DespawnPage("userPage", (Page) Frame.Content);
-            
             Frame.Content = tokenPage;
         }
+
+        public void ChangeToPage(Page page)
+        {
+            Frame.Content = page;
+        }
+
+        public void NewFloatingFrame(Page page)
+        {
+            Panel.SetZIndex(FloatingGrid, Panel.GetZIndex(Frame) + 1);
+            FloatingFrame.Content = page;
+        }
+
+        public void DestroyFloatingFrame()
+        {
+            Panel.SetZIndex(FloatingGrid, Panel.GetZIndex(Frame) - 1);
+        }
+        
     }
 }
