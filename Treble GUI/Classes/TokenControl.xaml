@@ -6,12 +6,30 @@
              mc:Ignorable="d" 
              d:DesignHeight="75" d:DesignWidth="400"
              Background="White">
-    <Grid Background="#FFF0F0F0" Margin="0,0,-80,0">
+    <Grid Margin="0,0,-80,0">
+            <Grid.Style>
+                <Style TargetType="{x:Type Grid}">
+                <Setter Property="Background">
+                    <Setter.Value>
+                        <SolidColorBrush>#FFE2E2E2</SolidColorBrush>
+                    </Setter.Value>
+                </Setter>
+                <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background">
+                                <Setter.Value>
+                                    <Brush>#FFD2D2D2</Brush>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Grid.Style>
         <Rectangle Height ="75" Width="480"/>
 
         <Ellipse x:Name="TokenIcon" Stroke="Black" HorizontalAlignment="Left" Height="56" Width="56" Margin="16,8,0,0" VerticalAlignment="Top" />
         <Label x:Name="TokenName" Content="Label" HorizontalAlignment="Left" Margin="92,5,0,0" VerticalAlignment="Top" FontFamily="Berlin Sans FB" FontSize="16" FontWeight="Bold" Background="{x:Null}" Foreground="#FF646464"  />
-        <Label x:Name="TokenPercentLbl" Content="100%" HorizontalAlignment="left" Margin="419,36,0,0" VerticalAlignment="Top" FontFamily="Berlin Sans FB" FontSize="16" FontWeight="Bold" Background="{x:Null}" Foreground="#FF646464"  />
+        <Label x:Name="TokenPercentLbl" Content="100%" HorizontalAlignment="Right" Margin="0,36,10,0" VerticalAlignment="Top" FontFamily="Berlin Sans FB" FontSize="16" FontWeight="Bold" Background="{x:Null}" Foreground="#FF646464"  />
         <Label x:Name="TokenAddressLabel" Content="Label" HorizontalAlignment="Left" Margin="93,37,0,0" VerticalAlignment="Top" FontFamily="Berlin Sans FB" FontSize="16" FontWeight="Bold" Background="{x:Null}" Foreground="#FF646464"  />
 
     </Grid>
