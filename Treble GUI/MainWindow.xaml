@@ -101,7 +101,7 @@
         </Button>
         <Grid x:Name="FloatingGrid" HorizontalAlignment="Stretch"  Grid.Row="1" VerticalAlignment="Stretch" >
             <Rectangle Width="800" Height="600" Fill="#CCE2E2E2"/>
-            <Frame x:Name="FloatingFrame"  HorizontalAlignment="Center" Height="300" Margin="0,0,0,60" Grid.Row="1" VerticalAlignment="Center" Width="400" BorderBrush="Gray" BorderThickness="1"/>
+            <Frame x:Name="FloatingFrame"  HorizontalAlignment="Center" Height="300" Margin="0,0,0,60" Grid.Row="1" VerticalAlignment="Center" Width="400" BorderBrush="Gray" BorderThickness="1" NavigationUIVisibility="Hidden" Navigated="Frame_Navigated"/>
         </Grid>
         <Frame x:Name="Frame" Content="Frame" HorizontalAlignment="Stretch" Margin="0,0,0,0" Grid.Row="1" VerticalAlignment="Stretch" NavigationUIVisibility="Hidden" Navigated="Frame_Navigated"/>
     </Grid>
