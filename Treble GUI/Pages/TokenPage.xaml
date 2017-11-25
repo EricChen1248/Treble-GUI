@@ -57,7 +57,7 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Button Content="租賃系統" FontFamily="Agency FB" FontSize="23" FontWeight="Bold" Foreground="Gray" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Height="33" Width="224" Grid.Column="1" Grid.Row="4">
+        <Button Content="投票系統" FontFamily="Agency FB" FontSize="23" FontWeight="Bold" Foreground="Gray" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Height="33" Width="224" Grid.Column="1" Grid.Row="4">
             <Button.Style>
                 <Style TargetType="{x:Type Button}">
                     <Setter Property="Background">

@@ -132,6 +132,8 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="bin\Debug\Treble GUI.exe.config" />
+    <None Include="bin\Release\Treble GUI.exe.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -161,6 +163,21 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\A1321484362.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bin\Debug\Database\Accounts.txt" />
+    <Content Include="bin\Debug\Jdenticon.dll" />
+    <Content Include="bin\Debug\Jdenticon.Gdi.dll" />
+    <Resource Include="bin\Debug\Jdenticon.Gdi.xml" />
+    <Resource Include="bin\Debug\Jdenticon.xml" />
+    <Content Include="bin\Debug\Treble GUI.exe" />
+    <Content Include="bin\Debug\Treble GUI.pdb" />
+    <Content Include="bin\Release\Jdenticon.dll" />
+    <Content Include="bin\Release\Jdenticon.Gdi.dll" />
+    <Resource Include="bin\Release\Jdenticon.Gdi.xml" />
+    <Resource Include="bin\Release\Jdenticon.xml" />
+    <Content Include="bin\Release\Treble GUI.exe" />
+    <Content Include="bin\Release\Treble GUI.pdb" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
