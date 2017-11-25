@@ -104,6 +104,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\VotesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\VotingSystem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\TokenControl.xaml.cs">
@@ -114,6 +122,12 @@
     </Compile>
     <Compile Include="Pages\Userpage.xaml.cs">
       <DependentUpon>Userpage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\VotesPage.xaml.cs">
+      <DependentUpon>VotesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\VotingSystem.xaml.cs">
+      <DependentUpon>VotingSystem.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

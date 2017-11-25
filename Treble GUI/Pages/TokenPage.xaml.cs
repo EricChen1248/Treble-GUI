@@ -41,6 +41,12 @@ namespace Treble_GUI.Pages
             MainWindow.Instance.NewFloatingFrame(new BuyToken(tokenID));
         }
 
+        private void VotingSystem_Button_Click(object sender, RoutedEventArgs e)
+        {
+            App.DespawnPage("TokenPage", this);
+            MainWindow.Instance.NewFloatingFrame(new VotingSystem());
+        }
+
 
     }
 }
