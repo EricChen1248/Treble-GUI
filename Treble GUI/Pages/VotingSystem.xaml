@@ -9,37 +9,43 @@
       Background="White">
 
     <Grid>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Height="48.052" Margin="59.741,211.688,0,0" VerticalAlignment="Top" Width="97.402" Click="VoteBtn_Click"/>
-        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#FFE2E2E2" Margin="0,0,0,264"/>
-        <Button x:Name="CloseBtn" HorizontalAlignment="Left" Margin="0,0,0,264" Height="36"  Width="48" BorderBrush="{x:Null}" Foreground="{x:Null}" Click ="CloseBtn_OnClick" >
-                <Button.Style>
-                    <Style TargetType="{x:Type Button}">
-                        <Setter Property="Background">
-                            <Setter.Value>
-                                <ImageBrush ImageSource="/Treble GUI;component/Resources/CloseBtn.png"/>
-                            </Setter.Value>
-                        </Setter>
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate TargetType="{x:Type Button}">
-                                    <Border Background="{TemplateBinding Background}">
-                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                    </Border>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background">
-                                    <Setter.Value>
-                                        <ImageBrush ImageSource="/Treble GUI;component/Resources/CloseBtn_Hover.png"/>
-                                    </Setter.Value>
-                                </Setter>
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </Button.Style>
-            </Button>
-
+        <Grid.ColumnDefinitions>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="22*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Height="17.052" Margin="-4.402,249.05,0,-2.102" VerticalAlignment="Top" Width="52.402" Click="VoteBtn_Click" Grid.Row="1"/>
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#FFE2E2E2" Grid.ColumnSpan="2"/>
+        <Button x:Name="CloseBtn" HorizontalAlignment="Left"  Width="48" BorderBrush="{x:Null}" Foreground="{x:Null}" Click ="CloseBtn_OnClick" >
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <ImageBrush ImageSource="/Treble GUI;component/Resources/CloseBtn.png"/>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush ImageSource="/Treble GUI;component/Resources/CloseBtn_Hover.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="Button1_Copy" Content="I Love Becky" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="118.5,10,46.5,0" Height="50" Grid.Row="1"/>
     </Grid>
 </Page>
