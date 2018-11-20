@@ -24,7 +24,9 @@ GUI for [Treble](https://github.com/EricChen1248/Treble)
 
 **Members**
 
-Eric Chen   Rex Shu   Becky Yu
+Eric Chen
+Rex Shu
+Becky Yu
 
 **Project Name**
 
